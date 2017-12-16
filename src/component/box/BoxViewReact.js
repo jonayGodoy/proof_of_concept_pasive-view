@@ -3,10 +3,6 @@ const ReactDom = require('react-dom');
 
 function BoxViewReact(){
 
-    function initText() {
-        //throw "not implemented";
-    }
-
     function hideText() {
         //throw "not implemented";
     }
@@ -34,7 +30,6 @@ function BoxViewReact(){
         ReactDom.render(<BoxReact/>, document.getElementById('box-react'));
     }
     return {
-        initText: initText,
         hideText: hideText,
         showText: showText,
         subscribeToToggleMessage:subscribeToToggleMessage

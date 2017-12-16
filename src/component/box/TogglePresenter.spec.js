@@ -13,7 +13,6 @@ describe("TogglePresenter", function () {
     beforeEach(function () {
         view = ToggleViewEmpty();
         mockView = sinon.mock(view);
-        mockView.expects("initText");
         mockView.expects("hideText");
     });
 
@@ -22,7 +21,6 @@ describe("TogglePresenter", function () {
     it("load text and hideText always when start", function () {
         let view = ToggleViewEmpty();
         let mockView = sinon.mock(view);
-        mockView.expects("initText").once();
         mockView.expects("hideText").once();
         mockView.expects("subscribeToToggleMessage");
 
@@ -70,7 +68,6 @@ describe("TogglePresenter", function () {
     it("hide text when toggle twice with ViewReact", function () {
         let view = BoxViewReact();
         let mockView = sinon.mock(view);
-        mockView.expects("initText").once();
         mockView.expects("subscribeToToggleMessage").once();
         mockView.expects("hideText").once();
         mockView.expects("showText").once();

@@ -1,10 +1,5 @@
 function ToggleViewEmpty(){
 
-
-    function initText() {
-        throw "not implemented";
-    }
-
     function hideText() {
         throw "not implemented";
     }
@@ -18,7 +13,6 @@ function ToggleViewEmpty(){
     }
 
     return {
-        initText: initText,
         hideText: hideText,
         showText: showText,
         subscribeToToggleMessage:subscribeToToggleMessage
