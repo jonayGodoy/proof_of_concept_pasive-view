@@ -3,17 +3,19 @@ const ReactDom = require('react-dom');
 
 function BoxViewReact(){
 
+    let subscribeToToggleMessageRequestedHandler;
+
     function hideText() {
-        //throw "not implemented";
+        ReactDom.unmountComponentAtNode(document.getElementById('container-message-react'));
     }
 
     function showText() {
-        //throw "not implemented";
+        ReactDom.render(<MessageBox />, document.getElementById('container-message-react'));
     }
 
     function subscribeToToggleMessageRequested (handler) {
+        subscribeToToggleMessageRequestedHandler = handler;
         renderBox();
-        /// /throw "not implemented";
     }
 
     function renderBox(){
@@ -22,13 +24,18 @@ function BoxViewReact(){
                 return (
                     <div  className="box">
                         <h2 className="titleBox">React js</h2>
-                        <div className="btn">Toogle</div>
-                        <p className="messageBox">Este mensaje a sido mostrado por React</p>
+                        <div className="btn" onClick={subscribeToToggleMessageRequestedHandler}>Toogle</div>
+                        <div id="container-message-react"/>
                     </div>)
             }
         }
         ReactDom.render(<BoxReact/>, document.getElementById('box-react'));
     }
+
+    class MessageBox extends React.Component{
+        render(){return <p className="messageBox">Este mensaje a sido mostrado por React</p>}
+    }
+
     return {
         hideText: hideText,
         showText: showText,
