@@ -1,7 +1,7 @@
 function TogglePresenter(view) {
 
     let isShow = true;
-    view.subscribeToToggleMessage(toggleMessage);
+    view.subscribeToToggleMessageRequested(toggleMessage);
     toggleMessage();
 
     function toggleMessage() {

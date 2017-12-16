@@ -11,7 +11,7 @@ function BoxViewReact(){
         //throw "not implemented";
     }
 
-    function subscribeToToggleMessage (handler) {
+    function subscribeToToggleMessageRequested (handler) {
         renderBox();
         /// /throw "not implemented";
     }
@@ -32,7 +32,7 @@ function BoxViewReact(){
     return {
         hideText: hideText,
         showText: showText,
-        subscribeToToggleMessage:subscribeToToggleMessage
+        subscribeToToggleMessageRequested:subscribeToToggleMessageRequested
     }
 }
 

@@ -8,14 +8,14 @@ function ToggleViewEmpty(){
         throw "not implemented";
     }
 
-    function subscribeToToggleMessage (handler) {
+    function subscribeToToggleMessageRequested (handler) {
         throw "not implemented";
     }
 
     return {
         hideText: hideText,
         showText: showText,
-        subscribeToToggleMessage:subscribeToToggleMessage
+        subscribeToToggleMessageRequested:subscribeToToggleMessageRequested
     }
 }
 

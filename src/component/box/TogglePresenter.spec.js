@@ -22,7 +22,7 @@ describe("TogglePresenter", function () {
         let view = ToggleViewEmpty();
         let mockView = sinon.mock(view);
         mockView.expects("hideText").once();
-        mockView.expects("subscribeToToggleMessage");
+        mockView.expects("subscribeToToggleMessageRequested");
 
         TogglePresenter(view);
 
@@ -31,7 +31,7 @@ describe("TogglePresenter", function () {
 
     it("show text when toggle", function () {
         mockView.expects("showText").once();
-        mockView.expects("subscribeToToggleMessage");
+        mockView.expects("subscribeToToggleMessageRequested");
 
         let togglePresenter = TogglePresenter(view);
         togglePresenter.toggleMessage();
@@ -42,7 +42,7 @@ describe("TogglePresenter", function () {
     it("hide text when toggle twice", function () {
         mockView.expects("showText").once();
         mockView.expects("hideText").once();
-        mockView.expects("subscribeToToggleMessage");
+        mockView.expects("subscribeToToggleMessageRequested");
 
 
         let togglePresenter = TogglePresenter(view);
@@ -55,7 +55,7 @@ describe("TogglePresenter", function () {
     it("view subscribe to toggle event", function () {
         mockView.expects("showText").once();
         let toggleMessageHandler = () => {};
-        view.subscribeToToggleMessage = (handler) =>{
+        view.subscribeToToggleMessageRequested = (handler) =>{
             toggleMessageHandler = handler;
         };
 
@@ -68,7 +68,7 @@ describe("TogglePresenter", function () {
     it("hide text when toggle twice with ViewReact", function () {
         let view = BoxViewReact();
         let mockView = sinon.mock(view);
-        mockView.expects("subscribeToToggleMessage").once();
+        mockView.expects("subscribeToToggleMessageRequested").once();
         mockView.expects("hideText").once();
         mockView.expects("showText").once();
         mockView.expects("hideText").once();
