@@ -1,4 +1,10 @@
-const TogglePresenter = require("./component/box/TogglePresenter");
-const ToggleViewJQuery = require("./component/box/ToggleViewJQuery");
+import "./index.html";
+import "./styles/styles.css"
 
-TogglePresenter(ToggleViewJQuery());
+const TogglePresenter = require("./component/box/TogglePresenter");
+
+const BoxViewReact = require("./component/box/BoxViewReact");
+
+let view = BoxViewReact();
+console.log(view);
+TogglePresenter(view);
