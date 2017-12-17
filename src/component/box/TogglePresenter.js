@@ -9,9 +9,7 @@ function TogglePresenter(view) {
         isShow = !isShow;
     }
 
-    return {
-        toggleMessage: toggleMessage,
-    }
+    return {toggleMessage: toggleMessage}
 
 }
 module.exports = TogglePresenter;
