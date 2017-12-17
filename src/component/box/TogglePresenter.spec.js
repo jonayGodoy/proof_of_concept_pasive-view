@@ -5,6 +5,7 @@ let sinon = require('sinon');
 const TogglePresenter = require("./TogglePresenter");
 const ToggleViewEmpty = require("./ToggleViewEmpty");
 const BoxViewReact = require("./BoxViewReact");
+const BoxViewVue = require("./BoxViewVue");
 
 describe("TogglePresenter", function () {
     let view;
@@ -67,6 +68,21 @@ describe("TogglePresenter", function () {
 
     it("hide text when toggle twice with ViewReact", function () {
         let view = BoxViewReact();
+        let mockView = sinon.mock(view);
+        mockView.expects("subscribeToToggleMessageRequested").once();
+        mockView.expects("hideText").once();
+        mockView.expects("showText").once();
+        mockView.expects("hideText").once();
+
+        let togglePresenter = TogglePresenter(view);
+        togglePresenter.toggleMessage();
+        togglePresenter.toggleMessage();
+
+        mockView.verify();
+    });
+
+    it("hide text when toggle twice with ViewReact", function () {
+        let view = BoxViewVue();
         let mockView = sinon.mock(view);
         mockView.expects("subscribeToToggleMessageRequested").once();
         mockView.expects("hideText").once();
