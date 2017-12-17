@@ -25,7 +25,7 @@ function BoxViewReact(){
             <div  class="box">
                 <h2 class="titleBox">Vue js</h2>
                 <div class="btn" v-on:click="subscribeToToggleMessageRequestedHandler">Toogle</div>
-                <div v-if="show">Este mensaje a sido mostrado por Vue</div>
+                <div v-if="show">Este mensaje ha sido mostrado por Vue</div>
             </div>`
         });
     }

@@ -33,7 +33,7 @@ function BoxViewReact(){
     }
 
     class MessageBox extends React.Component{
-        render(){return <p className="messageBox">Este mensaje a sido mostrado por React</p>}
+        render(){return <p className="messageBox">Este mensaje ha sido mostrado por React</p>}
     }
 
     return {
