@@ -8,7 +8,7 @@
     "trasnpiler": "babel dist/bundle.js —out-file dist/bundle.js",
     "build": " webpack",
     "mocha:babel": "mocha \"./{,!(node_modules)/**/}*.spec.js\" --recursive --compilers js:babel-core/register",
-    "deploy": "gh-pages -d dist -b gh-pages"
+    "deploy": "npm run build && gh-pages -d dist -b gh-pages"
   },
   "keywords": [
     "React",
