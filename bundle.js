@@ -971,14 +971,26 @@ __webpack_require__(16);
 
 __webpack_require__(17);
 
-var TogglePresenter = __webpack_require__(18);
-var BoxViewReact = __webpack_require__(19);
-var BoxViewVue = __webpack_require__(32);
+var _TogglePresenter = __webpack_require__(18);
 
-var viewReact = BoxViewReact();
-var viewVue = BoxViewVue();
-TogglePresenter(viewReact);
-TogglePresenter(viewVue);
+var _TogglePresenter2 = _interopRequireDefault(_TogglePresenter);
+
+var _BoxViewReact = __webpack_require__(19);
+
+var _BoxViewReact2 = _interopRequireDefault(_BoxViewReact);
+
+var _BoxViewVue = __webpack_require__(32);
+
+var _BoxViewVue2 = _interopRequireDefault(_BoxViewVue);
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { default: obj };
+}
+
+var viewReact = (0, _BoxViewReact2.default)();
+var viewVue = (0, _BoxViewVue2.default)();
+(0, _TogglePresenter2.default)(viewReact);
+(0, _TogglePresenter2.default)(viewVue);
 
 /***/ }),
 /* 16 */
@@ -1010,9 +1022,7 @@ function TogglePresenter(view) {
         isShow = !isShow;
     }
 
-    return {
-        toggleMessage: toggleMessage
-    };
+    return { toggleMessage: toggleMessage };
 }
 module.exports = TogglePresenter;
 
