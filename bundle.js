@@ -1103,7 +1103,7 @@ function BoxViewReact() {
                 return React.createElement(
                     'p',
                     { className: 'messageBox' },
-                    'Este mensaje a sido mostrado por React'
+                    'Este mensaje ha sido mostrado por React'
                 );
             }
         }]);
@@ -18468,7 +18468,7 @@ function BoxViewReact() {
             methods: {
                 subscribeToToggleMessageRequestedHandler: subscribeToToggleMessageRequestedHandler
             },
-            template: '\n            <div  class="box">\n                <h2 class="titleBox">Vue js</h2>\n                <div class="btn" v-on:click="subscribeToToggleMessageRequestedHandler">Toogle</div>\n                <div v-if="show">Este mensaje a sido mostrado por Vue</div>\n            </div>'
+            template: '\n            <div  class="box">\n                <h2 class="titleBox">Vue js</h2>\n                <div class="btn" v-on:click="subscribeToToggleMessageRequestedHandler">Toogle</div>\n                <div v-if="show">Este mensaje ha sido mostrado por Vue</div>\n            </div>'
         });
     }
 
