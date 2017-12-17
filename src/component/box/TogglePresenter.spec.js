@@ -19,7 +19,7 @@ describe("TogglePresenter", function () {
 
     it("test green", function () {assert.ok(true);});
 
-    it("load text and hideText always when start", function () {
+    it("hideText always when start", function () {
         let view = ToggleViewEmpty();
         let mockView = sinon.mock(view);
         mockView.expects("hideText").once();
@@ -81,7 +81,7 @@ describe("TogglePresenter", function () {
         mockView.verify();
     });
 
-    it("hide text when toggle twice with ViewReact", function () {
+    it("hide text when toggle twice with ViewVue", function () {
         let view = BoxViewVue();
         let mockView = sinon.mock(view);
         mockView.expects("subscribeToToggleMessageRequested").once();
