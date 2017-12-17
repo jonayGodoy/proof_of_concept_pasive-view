@@ -7,7 +7,8 @@
     "test": "npm run mocha:babel",
     "trasnpiler": "babel dist/bundle.js —out-file dist/bundle.js",
     "build": " webpack",
-    "mocha:babel": "mocha \"./{,!(node_modules)/**/}*.spec.js\" --recursive --compilers js:babel-core/register"
+    "mocha:babel": "mocha \"./{,!(node_modules)/**/}*.spec.js\" --recursive --compilers js:babel-core/register",
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "keywords": [
     "React",
@@ -31,6 +32,7 @@
     "babel-preset-vue": "^2.0.0",
     "chai": "^4.1.2",
     "file-loader": "^1.1.5",
+    "gh-pages": "^1.1.0",
     "mocha": "^4.0.1",
     "sinon": "^4.1.2",
     "webpack": "^3.10.0"
