@@ -4,7 +4,7 @@
   "description": "prueba de conceptos view-presenter",
   "main": "index.js",
   "scripts": {
-    "test": "mocha:babel",
+    "test": "npm run mocha:babel",
     "trasnpiler": "babel dist/bundle.js —out-file dist/bundle.js",
     "build": " webpack",
     "mocha:babel": "mocha \"./{,!(node_modules)/**/}*.spec.js\" --recursive --compilers js:babel-core/register"
