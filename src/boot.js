@@ -1,9 +1,9 @@
 import "./index.html";
 import "./styles/styles.css"
 
-const TogglePresenter = require("./component/box/TogglePresenter");
-const BoxViewReact = require("./component/box/BoxViewReact");
-const BoxViewVue = require("./component/box/BoxViewVue");
+import TogglePresenter from "./component/box/TogglePresenter";
+import BoxViewReact  from "./component/box/BoxViewReact";
+import BoxViewVue from "./component/box/BoxViewVue";
 
 let viewReact = BoxViewReact();
 let viewVue = BoxViewVue();
