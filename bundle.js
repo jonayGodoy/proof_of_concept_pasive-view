@@ -18453,7 +18453,7 @@ function _interopRequireDefault(obj) {
     return obj && obj.__esModule ? obj : { default: obj };
 }
 
-function BoxViewReact() {
+function BoxViewVue() {
 
     var subscribeToToggleMessageRequestedHandler = void 0;
     var VueBox = void 0;
@@ -18489,7 +18489,7 @@ function BoxViewReact() {
     };
 }
 
-module.exports = BoxViewReact;
+module.exports = BoxViewVue;
 
 /***/ }),
 /* 33 */
