@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-function BoxViewReact(){
+function BoxViewVue(){
 
     let subscribeToToggleMessageRequestedHandler;
     let VueBox;
@@ -37,4 +37,4 @@ function BoxViewReact(){
     }
 }
 
-module.exports = BoxViewReact;
+module.exports = BoxViewVue;
